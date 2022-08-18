@@ -4,10 +4,10 @@ function saturdayFun(string ="roller-skate" ){
 function mondayWork (string = 'go to the office'){
     return `This Monday, I will ${string}.`
 }
-function wrapAdjective(){
-    let result = wrapAdjective('*')
-    let rest = result("a hard worker")
-    rest = function(){
-        return console.log(`You are ${rest}`)
+
+function wrapAdjective(adjective = "*"){
+    return function(compliment ="special"){
+        return `You are ${adjective}${compliment}${adjective}!`
     }
 }
+wrapAdjective('%')("a dedicated programmer ")
